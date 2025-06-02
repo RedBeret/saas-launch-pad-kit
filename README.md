@@ -2,6 +2,8 @@
 
 Welcome to RedBeret, your complete platform for launching and managing SaaS products with speed and flexibility.
 
+> Last deployment: 2024-03-19
+
 ## Project Info
 
 **Live URL:** [https://redberet.github.io/saas-launch-pad-kit](https://redberet.github.io/saas-launch-pad-kit)
