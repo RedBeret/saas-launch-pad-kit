@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import AuthForm from '../components/auth/AuthForm';
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
+  const navigate = useNavigate();
   
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ const Signup = () => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Redirect to dashboard (in a real app, this would happen after successful authentication)
-      window.location.href = '/dashboard';
+      navigate('/dashboard');
     } catch (err) {
       setError('Failed to create account. Please try again.');
       setIsLoading(false);
