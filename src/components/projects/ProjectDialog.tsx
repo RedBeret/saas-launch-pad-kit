@@ -33,7 +33,7 @@ const ProjectDialog = ({ project, open, onOpenChange, onSave }: ProjectDialogPro
   const [description, setDescription] = React.useState(project?.description || '');
   const [status, setStatus] = React.useState<'active' | 'archived' | 'draft'>(project?.status || 'draft');
   
-  // Update form when project changes
+  // Update form when project or dialog open state changes
   useEffect(() => {
     if (project) {
       setName(project.name);
@@ -44,7 +44,7 @@ const ProjectDialog = ({ project, open, onOpenChange, onSave }: ProjectDialogPro
       setDescription('');
       setStatus('draft');
     }
-  }, [project]);
+  }, [project, open]);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
