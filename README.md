@@ -47,6 +47,7 @@ This project is configured to deploy to GitHub Pages. The deployment is handled 
 1. Push your changes to the `main` branch
 2. GitHub Actions will automatically build and deploy to GitHub Pages
 3. Your site will be available at `https://redberet.github.io/saas-launch-pad-kit`
+4. A `404.html` page in the `public` folder ensures client-side routing works when refreshing pages
 
 To manually trigger a deployment:
 1. Go to the [Actions tab](https://github.com/RedBeret/saas-launch-pad-kit/actions)
