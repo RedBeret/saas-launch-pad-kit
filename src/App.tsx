@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/features" element={<Features />} />
           
-          {/* Protected routes */}
+          {/* Dashboard routes */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/projects" element={<Projects />} />
           
