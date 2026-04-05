@@ -1,81 +1,63 @@
-# RedBeret – SaaS Launch Platform
+# SaaS Launch Pad Kit
 
-Welcome to RedBeret, your complete platform for launching and managing SaaS products with speed and flexibility.
+A ready-to-fork SaaS starter template with auth flows, dashboard, project management, and a pricing page. Built with React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-> Last deployment: 2024-03-19
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Deploy](https://github.com/RedBeret/saas-launch-pad-kit/actions/workflows/deploy.yml/badge.svg)](https://github.com/RedBeret/saas-launch-pad-kit/actions/workflows/deploy.yml)
 
-## Project Info
+**Live demo:** [redberet.github.io/saas-launch-pad-kit](https://redberet.github.io/saas-launch-pad-kit)
 
-**Live URL:** [https://redberet.github.io/saas-launch-pad-kit](https://redberet.github.io/saas-launch-pad-kit)
+## What you get
 
-## Getting Started
+- **Landing page** with hero, feature highlights, and pricing section
+- **Auth flows** - login, signup, forgot password (client-side, ready to wire to a backend)
+- **Dashboard** with sidebar navigation
+- **Project management** - create, view, and manage projects
+- **Pricing page** with tiered plan cards
+- **Responsive layout** - works on desktop and mobile
+- **Dark mode support** via next-themes
+- **Toast notifications** via Sonner
+- **40+ shadcn/ui components** pre-installed and ready to use
 
-To run RedBeret locally, make sure you have Node.js and npm installed. We recommend using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for easy Node.js management.
+## Stack
 
-### Local Development
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS + shadcn/ui
+- React Router (client-side routing)
+- React Query (data fetching layer)
+- React Hook Form + Zod (form validation)
+- Recharts (dashboard charts)
+- GitHub Pages deployment via Actions
 
-```sh
-# 1. Clone the repository
+## Quick start
+
+```bash
 git clone https://github.com/RedBeret/saas-launch-pad-kit.git
-
-# 2. Navigate to the project directory
 cd saas-launch-pad-kit
-
-# 3. Install dependencies
 npm install
-
-# 4. Start the development server
 npm run dev
 ```
 
-The app will be available at [http://localhost:3000](http://localhost:3000) by default.
+Open `http://localhost:5173` and start building.
 
-### Building for Production
+## Project structure
 
-```sh
-# Build the project
-npm run build
-
-# Preview the production build locally
-npm run preview
+```
+src/
+  components/
+    auth/           # login, signup, forgot password forms
+    layout/         # header, footer, sidebar, dashboard layout
+    projects/       # project cards and dialogs
+    subscription/   # pricing cards and sections
+    ui/             # 40+ shadcn/ui components
+  pages/            # route-level page components
 ```
 
-### GitHub Pages Deployment
+## Deployment
 
-This project is configured to deploy to GitHub Pages. The deployment is handled automatically through GitHub Actions.
+Push to `main` and GitHub Actions builds and deploys to Pages automatically. The `public/404.html` handles client-side routing on refresh.
 
-1. Push your changes to the `main` branch
-2. GitHub Actions will automatically build and deploy to GitHub Pages
-3. Your site will be available at `https://redberet.github.io/saas-launch-pad-kit`
-4. A `404.html` page in the `public` folder ensures client-side routing works when refreshing pages
+## License
 
-To manually trigger a deployment:
-1. Go to the [Actions tab](https://github.com/RedBeret/saas-launch-pad-kit/actions)
-2. Select the "Deploy to GitHub Pages" workflow
-3. Click "Run workflow"
-
-### Technologies Used
-
-- **Vite** – Fast build tool
-- **TypeScript** – Type-safe JavaScript
-- **React** – UI library
-- **shadcn-ui** – UI components
-- **Tailwind CSS** – Utility-first CSS
-
-## Development
-
-- Use your favorite IDE (VSCode recommended)
-- Edit files in the `src/` directory for components, pages, and logic
-- Styles are managed with Tailwind CSS
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-For questions or support, please contact the RedBeret team or open an issue on GitHub.
+[MIT](LICENSE)
