@@ -7,6 +7,6 @@ describe("cn", () => {
   });
 
   it("merges duplicate classes", () => {
-    expect(cn("a", "a", "b")).toBe("a b");
+    expect(cn("px-2", "px-2", "py-1")).toBe("px-2 py-1");
   });
 });
